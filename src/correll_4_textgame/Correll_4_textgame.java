@@ -13,8 +13,6 @@ public class Correll_4_textgame {
     static boolean fav = false;
     static boolean sardines = false;
     static boolean kibble = false;
-    static boolean fancyfeast = false;
-    static boolean milkbones = false;
     static String playername;
     static String gender;
     static String favfood;
@@ -122,10 +120,13 @@ public class Correll_4_textgame {
         } else {
             System.out.println("I don't understand. \n");
         }
-        }        
-
+        }
+    }
+        static void two() {            
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " started up the old truck, the engine roaring. " + playername + " feared that " + tpp + " would be approached, so " + tpp + " rolled down the ruined street, driving east. \n" + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " looked at " + tppp + " map, where the marker sat on Addison, Texas. This is where " + tpp + " needed to go, and this is where " + tppp + " journey truly began. \n");
         Scanner first = new Scanner(System.in);
+        boolean goodanswer = false;
+        while (!goodanswer) {
         System.out.println("As " + playername + " drives along, " + tpp + " hears a loud thump. Does " + tpp + " investigate the noise, or leave?");
         response = first.nextLine();
         if (response.contains("I") || response.contains("i")) {
@@ -138,9 +139,14 @@ public class Correll_4_textgame {
         } else {
             System.out.println("I don't understand. \n");
         }
+        }
+        }
 
+        static void three() {
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " comes across a wide, abandoned field with dead grass and flat hills. " + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " knows this is where " + tpp + " needs to be.");
         Scanner second = new Scanner(System.in);
+        boolean goodanswer = false;
+        while (!goodanswer) {
         System.out.println("As " + playername + " drives down the street, the sound of a gunshot rings out across the open plains. Does " + tpp + " get out of the car, or will " + tpp + " drive away?");
         response = second.nextLine();
         if (response.contains("G") || response.contains("g")) {
@@ -152,9 +158,14 @@ public class Correll_4_textgame {
         } else {
             System.out.println("I don't understand. \n");
         }
+        }
+        }
 
+        static void four() {
         System.out.println(playername + " made it to Fortworth, Texas after six days of travel. " + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " is running low on " + tppp + " favorite food, " + favfood + ", but has plenty of water.");
         Scanner third = new Scanner(System.in);
+        boolean goodanswer = false;
+        while (!goodanswer) {
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " spots a grocery store in " + tppp + " peripheral vision. Does " + tpp + " go to the grocery store?");
         response = third.nextLine();
         if (response.contains("Y") || response.contains("y")) {
@@ -168,9 +179,10 @@ public class Correll_4_textgame {
             System.out.println("I don't understand. \n");
         }
         }
+        }
     
 
-    static void two() {
+    static void five() {
         System.out.println(playername + " has made it to Highway 635, the North Lake far behind " + tppp + ". A shopping outlet becomes visible, the signs broken down and dull.");
         Scanner first = new Scanner(System.in);        
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " turns into the outlet, avoiding the cars that litter the grounds. She drives by an abandoned Petco, the sliding doors jarred open. Does " + tpp + " enter? Or does " + tpp + " leave?");
@@ -185,46 +197,9 @@ public class Correll_4_textgame {
         } else {
             System.out.println("I don't understand. \n");
         }
-
-        System.out.println("");
-        Scanner second = new Scanner(System.in);
-        System.out.println("");
-        response = second.nextLine();
-        if (response.contains("") || response.contains("")) {
-            System.out.println("");
-                //goodanswer = true;
-        } else if (response.contains("") || response.contains("")) {
-            System.out.println(playername + " something else happens here \n");
-                //goodanswer = true;
-                fancyfeast = true;
-        } else {
-            System.out.println("I don't understand. \n");
-        }
-
-        System.out.println("");
-        Scanner third = new Scanner(System.in);
-        System.out.println("");
-        response = third.nextLine();
-        if (response.contains("") || response.contains("")) {
-            System.out.println("");
-                //goodanswer = true;
-        } else if (response.contains("") || response.contains("")) {
-            System.out.println(playername + " something else happens here \n");
-                //goodanswer = true;
-                milkbones = true;
-        } else {
-            System.out.println("I don't understand. \n");
-        }
-        }
+    }
     
-    
-
     static void finale() {
 
     }
-
-    //static void health() {
-//}
-    //static void supply() {
-//}
 }
