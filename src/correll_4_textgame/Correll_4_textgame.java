@@ -27,7 +27,7 @@ public class Correll_4_textgame {
     static String tpp;
     static String tppp;
     static String tpop;
-    //These determine what is placed in a sentence depending on the player's gender
+    //These determine what is placed in a sentence depending on the player's gender: him/her, his/her, he/she
 
     public static void main(String[] args) {
             profile();
@@ -42,6 +42,7 @@ public class Correll_4_textgame {
     
 
     static void profile() {
+        //#method1()
         System.out.println("The world is ending. Buildings crumble, and the population dwindles. "
                 + "\n What caused all of this destruction and ruin? The war. The war that attempted "
                 + "to end the feud between cats and dogs. \n It began with an old woman who lived in "
@@ -63,6 +64,8 @@ public class Correll_4_textgame {
         Scanner sex = new Scanner(System.in);
         boolean goodanswer = false;
         while (!goodanswer) {
+            //#while
+            //this while loop will repeat the section if the player writes something that the game cannot understand or use
             System.out.println("Player's Gender Is...");
             gender = sex.nextLine();
             if (gender.contains("F") || gender.contains("f")) {
@@ -96,9 +99,11 @@ public class Correll_4_textgame {
             System.out.println("\n Character Profile: \n Name: " + playername + "\n Gender: Male \n Favorite Food: " + favfood + " \n Favorite Color: " + favcol + "\n");
         }
     }
-    //Shows what the player as typed and chosen as their profile
+    //#hero
+    //Shows what the player has typed and chosen as their profile, creates protagonist
         
     static void one() {
+        //#method2()
         if (!mf) {
             System.out.println(playername + " is standing in " + tppp + " home, if " + tpp + " could call it that, with its tattered furniture and stained walls. " + playername + " has been preparing for days, gathering food and supplies, to go and find the last pet. \n Will " + tpp + " find a cat or a dog? All of " + tppp + " actions will determine " + tppp + " story, so " + playername + " must be careful, and attempt to make the right decisions. \n");
         } else {
@@ -124,9 +129,12 @@ public class Correll_4_textgame {
         }
         }
     }
+    //#hero
+    //the protagonist will make certain decisions that will change the story
     //First decision: every method is a new decision
     
-    static void two() {            
+    static void two() {
+        //#method3()
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " started up the old truck, the engine roaring. " + playername + " feared that " + tpp + " would be approached, so " + tpp + " rolled down the ruined street, driving east. \n" + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " looked at " + tppp + " map, where the marker sat on Addison, Texas. This is where " + tpp + " needed to go, and this is where " + tppp + " journey truly began. \n");
         Scanner first = new Scanner(System.in);
         boolean goodanswer = false;
@@ -148,6 +156,7 @@ public class Correll_4_textgame {
     }
 
     static void three() {
+        //#method4()
         System.out.println(tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " comes across a wide, abandoned field with dead grass and flat hills. " + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " knows this is where " + tpp + " needs to be.");
         Scanner second = new Scanner(System.in);
         boolean goodanswer = false;
@@ -155,8 +164,11 @@ public class Correll_4_textgame {
         System.out.println("As " + playername + " drives down the street, the sound of a gunshot rings out across the open plains. Does " + tpp + " get out of the car, or will " + tpp + " drive away?");
         response = second.nextLine();
         if (response.contains("G") || response.contains("g")) {
-            System.out.println("A woman with a revolver runs up from behind a bush and grazes " + playername + "'s shoulder. Before " + playername + " can retaliate, the woman sprints away. " + playername + " uses one of " + tppp + " five medkits. " + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " gets back in the car and continues driving. \n");
-                goodanswer = true;            
+            System.out.println("A woman with a revolver runs up from behind a bush and shoots" + playername + "'s chest. " + playername + " is left to die in the plains");
+                youLose = true;
+                System.exit(0);
+                //#enemyobject
+                //Player loses the game because the enemy killed them
         } else if (response.contains("D") || response.contains("d")) {
             System.out.println(playername + " continues driving down the street. \n");
                 goodanswer = true;        
@@ -167,6 +179,7 @@ public class Correll_4_textgame {
     }
 
     static void four() {
+        //#method5()
         System.out.println(playername + " made it to Fortworth, Texas after six days of travel. " + tpp.substring(0, 1).toUpperCase() + tpp.substring(1) + " is running low on " + tppp + " favorite food, " + favfood + ", but has plenty of water.");
         Scanner third = new Scanner(System.in);
         boolean goodanswer = false;
@@ -219,12 +232,14 @@ public class Correll_4_textgame {
                 System.out.println("The cat comes closer as " + playername + " gives it the food, and " + playername + " sees the cat's collar. The cats name is Walter. This is the end of " + playername + "'s quest.");
                 youWin = true;
                 System.exit(0);
-                //Player wins the game
+                //#win
+                //Player wins the game when making the correct decision
             } else if (response.contains("N") || response.contains("n") && sardines) {
-                System.out.println(playername + " stares at the cat, refusing to give up " + tpp + " food. The cat hisses at you and runs away.");
+                System.out.println(playername + " stares at the cat, refusing to give up " + tpp + " food. The cat hisses and runs away.");
                 youLose = true;
                 System.exit(0);
-                //Player loses the game
+                //#lose
+                //Player loses the game when making the wrong decision
             } else if (!sardines) {
                 System.out.println("The cat grows hungry, and dies of starvation.");
                 youLose = true;
